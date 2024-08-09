@@ -1,0 +1,134 @@
+﻿@model TPLOCAL1.Models.FormModel
+@using System.Globalization
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ValidationFormulaire</title>
+    <link rel="stylesheet" href="~/resources/Index.css" />
+    <link rel="stylesheet" href="~/resources/ValidationFormulaire.css" />
+</head>
+<body>
+    <header>
+        <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+        <h1>Page de validation</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/Home/Index">Accueil</a></li>
+            <li><a href="/Home/Index/AvisList">Liste avis</a></li>
+        </ul>
+    </nav>
+
+    <p>Votre formulaire a bien été pris en compte</p>
+
+    <form>
+    <table>
+        <caption>Informations personnelles</caption>
+            <tr>
+                <td>
+                    <label asp-for="nom">Nom</label>
+                </td>
+                <td>
+                    <input asp-for="nom" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="prenom">Prénom</label>
+                </td>
+                <td>
+                    <input asp-for="prenom" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="sexe">Sexe</label>
+                </td>
+                <td>
+                    <input asp-for="sexe" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="adresse">Adresse</label>
+                </td>
+                <td>
+                    <input asp-for="adresse" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="codepost">Code Postal</label>
+                </td>
+                <td>
+                    <input asp-for="codepost" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="ville">Ville</label>
+                </td>
+                <td>
+                    <input asp-for="ville" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="mail">Adresse mail</label>
+                </td>
+                <td>
+                    <input asp-for="mail" readonly="readonly">
+                </td>
+            </tr>        
+    </table>
+
+    <p></p>
+
+    <table>
+        <caption>Informations formation suivie</caption>
+        <tr>
+            <td>
+                <label asp-for="datedeb">Date début formation</label>
+            </td>
+            <td>
+                <input asp-for="datedeb" readonly="readonly">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="formation">Formation suivie</label>
+            </td>
+            <td>
+				<input asp-for="formation" readonly="readonly">
+            </td>
+        </tr>
+    </table>
+
+    <p></p>
+
+    <table>
+        <caption>Avis sur la formation</caption>
+        <tr>
+            <td>
+                <label asp-for="cobol">Formation Cobol</label>
+            </td>
+            <td>
+                <input asp-for="cobol" readonly="readonly">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="csharp">Formation C#</label>
+            </td>
+            <td>
+                <input asp-for="csharp" readonly="readonly">
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
